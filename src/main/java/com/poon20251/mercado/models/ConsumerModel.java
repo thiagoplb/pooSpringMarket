@@ -22,6 +22,7 @@ public class ConsumerModel implements Serializable {
     private String cpf;
 
     @Column(nullable = false)
-    private String nome;
+    private String name;
+
 
 }

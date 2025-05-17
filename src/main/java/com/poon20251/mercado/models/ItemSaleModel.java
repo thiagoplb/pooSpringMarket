@@ -21,7 +21,7 @@ public class ItemSaleModel implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "sale_id", nullable = false)
-    private SaleModel sale;
+    private SaleModel saleModel;
 
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = false)
@@ -33,3 +33,4 @@ public class ItemSaleModel implements Serializable {
     @Column(nullable = false)
     private Double unitPrice;
 }
+

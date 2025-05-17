@@ -1,10 +1,10 @@
 package com.poon20251.mercado.models;
 
+import com.poon20251.mercado.DTO.ItemSaleResponseDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -24,17 +24,19 @@ public class SaleModel implements Serializable {
     private Long id;
 
     @Column(nullable = false)
-    private LocalDateTime saleDate;
+    private LocalDateTime saleDateTime;
 
     @Column(nullable = false)
     private Double totalAmount;
 
     @ManyToOne
     @JoinColumn(name = "consumer_cpf", nullable = false)
-    private ConsumerModel consumer;
+    private ConsumerModel consumerModel;
 
-    @OneToMany(mappedBy = "sale", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<ItemSaleModel> items = new HashSet<>();
+    @OneToMany(mappedBy = "saleModel", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<ItemSaleModel> itemsSaleModel = new HashSet<>();
 
 
 }
+
+
