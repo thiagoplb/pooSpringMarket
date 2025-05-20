@@ -1,5 +1,6 @@
 package com.poon20251.mercado.models;
 
+import com.poon20251.mercado.enums.ProductType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,11 +30,12 @@ public class ProductModel implements Serializable {
     private Integer stockQuantity;
 
     @Column(nullable = false)
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private ProductType productType;
 
     @Column(nullable = false)
     private Double unitPrice;
 
-
-
 }
+
+
