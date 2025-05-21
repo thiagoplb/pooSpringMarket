@@ -1,5 +1,6 @@
 package com.poon20251.mercado.models;
 
+import com.poon20251.mercado.DTO.ItemSaleResponseDTO;
 import jakarta.persistence.*;
 import lombok.*;
 import java.io.Serializable;
