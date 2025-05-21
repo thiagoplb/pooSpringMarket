@@ -33,3 +33,4 @@ public class ItemSaleModel implements Serializable {
     @Column(nullable = false)
     private Double unitPrice;
 }
+
